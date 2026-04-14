@@ -1,0 +1,245 @@
+
+historias
+
+1)Yo persona natural , quiero registrar una solicitud para ser socio del club nautico poseidon para disponer de los servicios y privilegios del mismo.
+
+2)yo Area de atencion al cliente quiero verificar datos del postulante para facilitar al jefe la aceptacion del socio con el fin de que el numero de socios aumente ordenadamente
+
+3)yo jefe atencion al cliente quiero aprobar o rechazar la solicitud aceptada de los datos verificados de los solicitantes a socio
+
+4)yo jefe atencion al cliente quiero registrar un documento indicando los motivos de la desaprobacion el cual se entrega al postulante con la finalidad de que subsane los motivos por la cual no fue aprobada su solicitud
+
+5)yo socio del club con embarcaciones propias quiero llenar una ficha para cada una de mis embarcaciones usando mi ficha de "ficha de registro de embarcacion" para que me asignen una rada en el club
+
+6)yo Area de servicios navieros quiero verificar los datos de  la ficha de registro de embarcacion de un socio en la base de Dirección de Capitanías y Guardacostas de la Nación para registrarlo y asignarle una rada.
+        -
+
+7)yo Área de Servicios Naviero quiero registrar la ficha de registro de embarcacion de un socio verificada para asignar un rada a esta embarcacion del socio
+        -Dirección de Capitanías y Guardacostas de la Nación quiero verificar los datos de  la ficha de registro de embarcacion de un socio para ...
+
+
+8)yo como socio del club quiero pagar mi membresia de socio del club para mantener mi status de socio y poder disponer de los privilegios del club
+
+9)yo como socio del club con embarciones en mi propiedad quiero pagar rada del club para mantener el servicio de rada
+
+10)yo coomo socio del club quiero pagar servicios adicionales para satisfacer necesidades adicionales a la membresia o al servicio de rada
+
+11)yo departamento de cobranzas quiero enviar recordatorios de pago la mensualidad de membresia de socio a los socios del club
+
+
+12)yo socio  quiero  solicitar el permiso respectivo al Área de Servicios Navieros vía telefónica o personalmente Para hacer uso de sus naves
+
+13) yo servicios navieros quiero aprobar la solicitud de permiso del socio que quiere hacer uso de su embarcacion para que pueda utilizarlo
+
+14) yo socio del club quiero registrar una solicitud de retiro para desligarme del club
+
+15)yo area de atencion al cliente quiero aprobar una solicitud de retiro y generar una liquidacion administrativa para notificarle al socio que quiere retirarse los pagos pendientes y pague sus deudas
+
+16)yo como socio del club quiero pagar la liquidacion administrativa para darme de baja del club
+
+17) Registro de tripulación autorizada Yo como área de servicios navieros quiero registrar y validar la tripulación autorizada de una embarcación para evitar problemas con la autoridad marítima.
+
+18) yo como socio del club y susbcrito a rada quiero cancelar la subscripcion de rada para evitar cargos
+
+19)yo como socio del club y susbcrito a rada quiero hacer una solicitud de cambio de rada para cambiar mi rada
+
+
+20)yo departamento de facturacion quiero generar boleta o factura del pago de membresia o servicios de un socio para declaraciones fiscales
+
+
+📘 Historias de Usuario – Sistema Club Náutico Poseidón
+🧑‍🤝‍🧑 1. Gestión de Socios
+
+1. Registro de solicitud de socio
+
+Yo como persona natural quiero registrar una solicitud para ser socio del club náutico Poseidón, para acceder a sus servicios y privilegios.
+
+2. Verificación de datos del postulante
+
+Yo como área de atención al cliente quiero verificar los datos del postulante para asegurar que la información sea correcta antes de su evaluación.
+
+3. Evaluación de solicitud
+
+Yo como jefe de atención al cliente quiero aprobar o rechazar la solicitud de los postulantes para controlar el ingreso de nuevos socios.
+
+4. Notificación de rechazo
+
+Yo como jefe de atención al cliente quiero generar un documento con los motivos de rechazo para que el postulante pueda subsanar las observaciones.
+
+🚤 2. Gestión de Embarcaciones y Rada
+
+5. Registro de embarcaciones
+
+Yo como socio con embarcaciones quiero registrar una ficha por cada embarcación para que se me asigne una rada.
+
+6. Verificación con autoridad marítima
+
+Yo como área de servicios navieros quiero validar los datos de la embarcación en la base de la Dirección de Capitanías y Guardacostas para asegurar su legalidad.
+
+7. Asignación de rada
+
+Yo como área de servicios navieros quiero registrar la embarcación verificada para asignarle una rada adecuada.
+
+8. Registro de tripulación autorizada
+
+Yo como área de servicios navieros quiero registrar y validar la tripulación autorizada para evitar problemas con la autoridad marítima.
+
+9. Cambio de rada
+
+Yo como socio quiero solicitar el cambio de rada para reubicar mi embarcación según mis necesidades.
+
+10. Cancelación de servicio de rada
+
+Yo como socio quiero cancelar la suscripción de rada para evitar cobros innecesarios.
+
+💰 3. Facturación y Pagos
+
+11. Pago de membresía
+
+Yo como socio quiero pagar mi membresía para mantener mi condición activa y acceder a los servicios del club.
+
+12. Pago de rada
+
+Yo como socio con embarcaciones quiero pagar el servicio de rada para mantener el amarre de mis embarcaciones.
+
+13. Pago de servicios adicionales
+
+Yo como socio quiero pagar servicios adicionales para cubrir necesidades extra dentro del club.
+
+14. Generación de comprobantes
+
+Yo como departamento de facturación quiero generar boletas o facturas para registrar formalmente los pagos realizados.
+
+15. Envío de recordatorios de pago
+
+Yo como departamento de cobranzas quiero enviar recordatorios de pago para reducir la morosidad de los socios.
+
+⚓ 4. Uso de Embarcaciones
+
+16. Solicitud de salida de embarcación
+
+Yo como socio quiero solicitar permiso para usar mi embarcación indicando fechas, tripulación e itinerario.
+
+17. Aprobación de salida
+
+Yo como área de servicios navieros quiero aprobar solicitudes de salida para autorizar el uso de embarcaciones.
+
+🚪 5. Retiro de Socios
+
+18. Solicitud de retiro
+
+Yo como socio quiero registrar una solicitud de retiro para desligarme del club.
+
+19. Generación de liquidación administrativa
+
+Yo como área de atención al cliente quiero generar una liquidación con los pagos pendientes para formalizar el retiro del socio.
+
+20. Pago de liquidación
+
+Yo como socio quiero pagar la liquidación administrativa para completar mi proceso de baja.
+
+
+
+📘 Criterios de Aceptación – Club Náutico Poseidón
+🧑‍🤝‍🧑 1. Gestión de Socios
+1. Registro de solicitud de socio
+Dado un usuario no registrado
+Cuando completa el formulario de solicitud
+Entonces el sistema registra la solicitud con estado “pendiente”
+Dado un formulario incompleto
+Cuando el usuario intenta enviarlo
+Entonces el sistema muestra mensajes de validación
+2. Verificación de datos del postulante
+Dado una solicitud pendiente
+Cuando el personal revisa los datos
+Entonces el sistema permite marcarla como “verificada”
+Dado datos inconsistentes
+Cuando se detectan errores
+Entonces el sistema permite observar la solicitud
+3. Evaluación de solicitud
+Dado una solicitud verificada
+Cuando el jefe la revisa
+Entonces puede aprobarla o rechazarla
+Dado una solicitud aprobada
+Entonces el sistema asigna el estado “socio activo”
+4. Notificación de rechazo
+Dado una solicitud rechazada
+Cuando el jefe registra el motivo
+Entonces el sistema genera un documento de rechazo
+🚤 2. Gestión de Embarcaciones y Rada
+5. Registro de embarcaciones
+Dado un socio activo
+Cuando registra una embarcación
+Entonces el sistema guarda la ficha de registro
+6. Verificación con autoridad marítima
+Dado una embarcación registrada
+Cuando se consulta la base externa
+Entonces el sistema valida los datos correctamente
+Dado datos no válidos
+Entonces el sistema rechaza la validación
+7. Asignación de rada
+Dado una embarcación verificada
+Cuando se registra en el sistema
+Entonces se le asigna una rada disponible
+8. Registro de tripulación autorizada
+Dado una embarcación registrada
+Cuando se ingresan datos de tripulación
+Entonces el sistema valida y almacena la información
+9. Cambio de rada
+Dado una embarcación con rada asignada
+Cuando el socio solicita cambio
+Entonces el sistema evalúa disponibilidad y actualiza la rada
+10. Cancelación de servicio de rada
+Dado una suscripción activa de rada
+Cuando el socio solicita cancelación
+Entonces el sistema desactiva el servicio y detiene futuros cobros
+💰 3. Facturación y Pagos
+11. Pago de membresía
+Dado un socio activo
+Cuando realiza el pago
+Entonces el sistema actualiza su estado a “al día”
+12. Pago de rada
+Dado un servicio de rada activo
+Cuando se realiza el pago
+Entonces el sistema registra el pago correctamente
+13. Pago de servicios adicionales
+Dado servicios consumidos
+Cuando el socio realiza el pago
+Entonces el sistema liquida los cargos pendientes
+14. Generación de comprobantes
+Dado un pago realizado
+Cuando se procesa el pago
+Entonces el sistema genera una boleta o factura
+15. Envío de recordatorios de pago
+Dado un socio con deuda
+Cuando se acerca la fecha de vencimiento
+Entonces el sistema envía un recordatorio automático
+⚓ 4. Uso de Embarcaciones
+16. Solicitud de salida
+Dado un socio con embarcación registrada
+Cuando solicita salida
+Entonces el sistema registra fecha, tripulación e itinerario
+17. Aprobación de salida
+Dado una solicitud de salida
+Cuando es revisada por servicios navieros
+Entonces puede ser aprobada o rechazada
+🚪 5. Retiro de Socios
+18. Solicitud de retiro
+Dado un socio activo
+Cuando solicita retiro
+Entonces el sistema registra la solicitud
+19. Generación de liquidación
+Dado una solicitud de retiro
+Cuando es procesada
+Entonces el sistema genera una liquidación con deudas pendientes
+20. Pago de liquidación
+Dado una liquidación pendiente
+Cuando el socio paga
+Entonces el sistema cambia su estado a “retirado”
+💡 Tip PRO (esto te puede salvar en exposición)
+
+Si te preguntan:
+👉 ¿por qué usar Given/When/Then?
+Responde algo como:
+
+“Porque permite definir el comportamiento esperado del sistema de forma clara, verificable y alineada a pruebas.”
