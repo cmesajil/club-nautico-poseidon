@@ -7,26 +7,41 @@ import { tap } from 'rxjs';
   providedIn: 'root',
 })
 export class AuthService {
-  private http = inject(HttpClient); // Inyección moderna de Angular 21
 
-  // Usamos un Signal para que la app reaccione al cambio de estado
+  private http = inject(HttpClient);
+
   private currentUser = signal<AuthResponse | null>(null);
 
-  // Un signal computado (solo lectura) para que los componentes sepan si hay sesión
   isAuthenticated = computed(() => !!this.currentUser());
 
   login(credentials: LoginCredentials) {
-    // Aquí usamos la URL que te de el equipo de backend
-    return this.http.post<AuthResponse>('api/login', credentials).pipe(
+
+    return this.http.post<AuthResponse>(
+      'http://localhost:8080/auth/login',
+      credentials
+    ).pipe(
+
       tap((response) => {
-        this.currentUser.set(response); // Guardamos en el Signal
-        localStorage.setItem('token', response.token); // Persistencia simple
-      }),
+
+        console.log("LOGIN EXITOSO");
+        console.log(response);
+
+        this.currentUser.set(response);
+
+        localStorage.setItem('token', response.token);
+
+      })
+
     );
+
   }
 
   logout() {
+
     this.currentUser.set(null);
+
     localStorage.removeItem('token');
+
   }
+
 }
