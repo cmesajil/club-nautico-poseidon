@@ -1,0 +1,47 @@
+<div class="card p-4">
+    <h3>Solicitud de Ingreso - Club Náutico Poseidón</h3>
+    <form [formGroup]="form" (ngSubmit)="enviar()">
+
+        <div class="row">
+            <div class="col-md-4">
+                <label>Tipo Doc.</label>
+                <select formControlName="tipoDocumento" class="form-control">
+                    <option value="DNI">DNI</option>
+                    <option value="CE">C.E.</option>
+                </select>
+            </div>
+            <div class="col-md-8">
+                <label>Número de Documento</label>
+                <input type="text" formControlName="numeroDocumento" class="form-control">
+            </div>
+        </div>
+
+        <div class="mt-3">
+            <label>Nombres</label>
+            <input type="text" formControlName="nombres" class="form-control">
+        </div>
+
+        <div class="mt-3">
+            <label>Apellidos</label>
+            <input type="text" formControlName="apellidos" class="form-control">
+        </div>
+
+        <div class="mt-3">
+            <label>Correo Electrónico</label>
+            <input type="email" formControlName="correo" class="form-control">
+        </div>
+
+        <div class="mt-3">
+            <label>¿Cómo se considera como pagador?</label>
+            <select formControlName="clasificacionExterna" class="form-control">
+                <option value="PAGADOR">Buen Pagador</option>
+                <option value="PAGADOR_ESPORADICO">Esporádico</option>
+                <option value="RENUENTE">Renuente</option>
+            </select>
+        </div>
+
+        <button type="submit" class="btn btn-primary mt-4" [disabled]="form.invalid">
+            Enviar Solicitud
+        </button>
+    </form>
+</div>
