@@ -41,7 +41,7 @@ export class LoginComponent {
         console.log("TOKEN:");
         console.log(response);
 
-        this.router.navigate(['/solicitud/lista-solicitudes']);
+        this.router.navigate(['/dashboard']);
       },
 
       error: (error) => {

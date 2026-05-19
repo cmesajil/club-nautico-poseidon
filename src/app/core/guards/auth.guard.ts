@@ -7,5 +7,5 @@ export const authGuard: CanActivateFn = () => {
   const router = inject(Router);
 
   // Si está autenticado (según nuestro Signal), pasa. Si no, al login.
-  return authService.isAuthenticated() || router.parseUrl('/auth/login');
+  return authService.isAuthenticated() || router.parseUrl('/login');
 };
