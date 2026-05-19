@@ -30,5 +30,6 @@ export class AuthService {
     this.currentUser.set(null);
 
     localStorage.removeItem('token');
+    localStorage.removeItem('auth_user');
   }
 }
