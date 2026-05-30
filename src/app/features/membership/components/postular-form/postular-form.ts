@@ -6,9 +6,8 @@ import { CommonModule } from '@angular/common'; // Para usar *ngIf o [disabled]
   selector: 'app-postular-form',
   standalone: true, // Asegúrate de que esto esté presente
   imports: [
-
     CommonModule,
-    ReactiveFormsModule // <-- OBLIGATORIO aquí para componentes standalone
+    ReactiveFormsModule, // <-- OBLIGATORIO aquí para componentes standalone
   ],
   templateUrl: './postular-form.html',
   styleUrl: './postular-form.scss',
@@ -21,17 +20,47 @@ export class PostularForm {
   // Usamos un solo nombre para el formulario
   form = this.fb.group({
     tipoDocumento: ['', Validators.required],
-    numeroDocumento: ['', [Validators.required, Validators.minLength(8)]],
-    nombres: ['', Validators.required],
-    apellidos: ['', Validators.required],
+
+    numeroDocumento: ['', [Validators.required, Validators.pattern(/^\d{8}$/)]],
+
+    nombres: ['', [Validators.required, Validators.pattern(/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/)]],
+
+    apellidos: ['', [Validators.required, Validators.pattern(/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/)]],
+
     correo: ['', [Validators.required, Validators.email]],
-    telefono: [''],
-    clasificacionExterna: ['PAGADOR', Validators.required]
+
+    telefono: ['', [Validators.pattern(/^\d{9}$/)]],
+
+    clasificacionExterna: ['PAGADOR', Validators.required],
   });
+
+  soloNumeros(event: KeyboardEvent) {
+    const teclasPermitidas = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
+
+    if (teclasPermitidas.includes(event.key)) {
+      return;
+    }
+
+    if (!/[0-9]/.test(event.key)) {
+      event.preventDefault();
+    }
+  }
+
+  soloLetras(event: KeyboardEvent) {
+    const teclasPermitidas = ['Backspace', 'Delete', 'ArrowLeft', 'ArrowRight', 'Tab'];
+
+    if (teclasPermitidas.includes(event.key)) {
+      return;
+    }
+
+    if (!/[A-Za-zÁÉÍÓÚáéíóúÑñ ]/.test(event.key)) {
+      event.preventDefault();
+    }
+  }
 
   enviar() {
     if (this.form.valid) {
-      // Por ahora, como no tenemos el servicio conectado, 
+      // Por ahora, como no tenemos el servicio conectado,
       // emitimos el valor al componente padre (la página)
       this.onSubmit.emit(this.form.value);
     }
