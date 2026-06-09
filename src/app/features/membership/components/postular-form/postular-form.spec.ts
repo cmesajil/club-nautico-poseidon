@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { PostularForm } from './postular-form';
 
 describe('PostularForm', () => {
@@ -8,15 +7,37 @@ describe('PostularForm', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
+      // Al ser un componente Standalone, se importa en 'imports', no en 'declarations'
       imports: [PostularForm],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PostularForm);
     component = fixture.componentInstance;
+
+    // Agregamos detectChanges para que Angular procese el componente antes de los tests
+    fixture.detectChanges();
     await fixture.whenStable();
   });
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+
+  // ========================================================
+  // NUEVA PRUEBA: Validación de datos correctos
+  // ========================================================
+  it('debe ser válido con datos correctos', () => {
+    component.form.patchValue({
+      tipoDocumento: 'DNI',
+      numeroDocumento: '45678912', // 8 números exactos como pide tu regex
+      nombres: 'CARLOS ALBERTO',
+      apellidos: 'MENDOZA ROJAS',
+      correo: 'carlos.mendoza@gmail.com',
+      telefono: '987654321', // 9 números exactos si se provee
+      clasificacionExterna: 'PAGADOR',
+    });
+
+    // Evaluamos si el formulario pasa todas tus validaciones y Regex
+    expect(component.form.valid).toBe(true);
   });
 });
