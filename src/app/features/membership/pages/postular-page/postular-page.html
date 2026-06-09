@@ -1,18 +1,20 @@
-<!-- src/app/features/membership/pages/postular-page/postular-page.component.html -->
-<div class="container" style="margin-top: 100px; margin-bottom: 50px;">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
+<div class="container" style="margin-top: 100px; margin-bottom: 50px">
+  <div class="row justify-content-center">
+    <div class="col-md-8">
+      <div class="text-center mb-4">
+        <h2 class="display-5">Únete al Club Náutico Poseidón ⚓</h2>
+        <p class="lead text-muted">Completa tus datos para iniciar el proceso de postulación</p>
+      </div>
 
-            <div class="text-center mb-4">
-                <h2 class="display-5">Únete al Club Náutico Poseidón ⚓</h2>
-                <p class="lead text-muted">Completa tus datos para iniciar el proceso de postulación</p>
-            </div>
+      @if (mensajeExito) {
+      <div class="alert alert-success shadow-sm mb-4 text-center" role="alert">
+        <i class="bi bi-check-circle-fill me-2"></i> <strong>{{ mensajeExito }}</strong>
+      </div>
+      }
 
-            <div class="card shadow-sm p-4">
-                <!-- Aquí se renderiza tu formulario -->
-                <app-postular-form (onSubmit)="alRecibirDatos($event)"></app-postular-form>
-            </div>
-
-        </div>
+      <div class="card shadow-sm p-4">
+        <app-postular-form (onSubmit)="alRecibirDatos($event)"></app-postular-form>
+      </div>
     </div>
+  </div>
 </div>

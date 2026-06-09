@@ -9,34 +9,38 @@ import { Router } from '@angular/router';
 @Component({
   selector: 'app-postular-page',
   standalone: true,
-  imports: [CommonModule,
-    PostularForm],
+  imports: [CommonModule, PostularForm],
   templateUrl: './postular-page.html',
   styleUrl: './postular-page.scss',
 })
 export class PostularPage {
+  // Nueva variable para controlar el mensaje en la vista
+  mensajeExito: string | null = null;
 
   private membershipService = inject(Membership);
-  private router = inject(Router)
+  private router = inject(Router);
   alRecibirDatos(datos: any) {
     console.log('Datos recibidos en la página:', datos);
     // Aquí es donde más adelante llamarás a tu servicio
     this.membershipService.postular(datos).subscribe({
       next: (response) => {
-
-        // 1. ¿Qué mensaje te gustaría mostrarle al usuario aquí? 
         console.log('¡Éxito!', response);
-        this.router.navigate(['/Estados/postulacion']);
+
+        // 1. Mostramos el mensaje
+        this.mensajeExito = '¡Postulación enviada con éxito!';
+
+        // 2. Esperamos 3 segundos (3000 ms) antes de cambiar de página
+        setTimeout(() => {
+          this.router.navigate(['/Estados/postulacion']);
+        }, 3000);
       },
 
       error: (error) => {
-
-        console.log("ERROR");
+        console.log('ERROR');
         console.log(error);
 
-        alert("Error al enviar");
-      }
-    })
-
+        alert('Error al enviar');
+      },
+    });
   }
 }
