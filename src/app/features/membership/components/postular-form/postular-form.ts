@@ -23,9 +23,29 @@ export class PostularForm {
 
     numeroDocumento: ['', [Validators.required, Validators.pattern(/^\d{8}$/)]],
 
-    nombres: ['', [Validators.required, Validators.pattern(/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/)]],
+    nombres: [
+      '',
+      [
+        Validators.required,
 
-    apellidos: ['', [Validators.required, Validators.pattern(/^[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/)]],
+        // Solo letras y espacios, y obliga a que exista al menos una vocal
+        Validators.pattern(/^(?=.*[AEIOUÁÉÍÓÚaeiouáéíóú])[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/),
+
+        // Longitud máxima
+        Validators.maxLength(50),
+      ],
+    ],
+
+    apellidos: [
+      '',
+      [
+        Validators.required,
+
+        Validators.pattern(/^(?=.*[AEIOUÁÉÍÓÚaeiouáéíóú])[A-Za-zÁÉÍÓÚáéíóúÑñ ]+$/),
+
+        Validators.maxLength(50),
+      ],
+    ],
 
     correo: ['', [Validators.required, Validators.email]],
 
