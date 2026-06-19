@@ -8,6 +8,7 @@ import { routes } from './app.routes';
 
 export const appConfig: ApplicationConfig = {
   providers: [
+    //Cada vez que alguien use HttpClient, ejecuta primero este interceptor.
     provideHttpClient(withInterceptors([loadingInterceptor])),
     provideBrowserGlobalErrorListeners(),
     provideRouter(routes),

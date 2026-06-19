@@ -12,3 +12,14 @@ export interface DashboardResumen {
   totalSocios: number;
   servicios: Servicio[];
 }
+
+export interface SocioEstado {
+  estado: string;
+  cantidad: number;
+}
+
+export interface IngresoMes {
+  year: number;
+  month: number;
+  total: number;
+}

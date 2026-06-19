@@ -55,6 +55,67 @@
         </div>
       </div>
 
+      <div class="row g-4 mb-4">
+        <!-- Gráfico de Torta (Estado Socios) -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-header bg-transparent border-0 pt-4 pb-0">
+              <h5 class="mb-0 text-secondary fw-bold">Estado de Socios</h5>
+            </div>
+            <div class="card-body d-flex align-items-center justify-content-center">
+              @if (sociosResource.status() === 'loading') {
+                <div class="text-center py-5">
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                  </div>
+                </div>
+              } @else if (sociosResource.status() === 'error') {
+                <div class="alert alert-danger w-100">Error al cargar gráfico de socios.</div>
+              } @else if (sociosData() && sociosData()?.length) {
+                <apx-chart class="w-100"
+                  [series]="pieChartOptions().series!"
+                  [chart]="pieChartOptions().chart!"
+                  [labels]="pieChartOptions().labels!"
+                  [legend]="pieChartOptions().legend!">
+                </apx-chart>
+              } @else {
+                <p class="text-muted text-center py-4">No hay datos de socios</p>
+              }
+            </div>
+          </div>
+        </div>
+
+        <!-- Histograma (Ingresos Mensuales) -->
+        <div class="col-md-6">
+          <div class="card h-100 shadow-sm border-0">
+            <div class="card-header bg-transparent border-0 pt-4 pb-0">
+              <h5 class="mb-0 text-secondary fw-bold">Ingresos Mensuales</h5>
+            </div>
+            <div class="card-body">
+              @if (ingresosResource.status() === 'loading') {
+                <div class="text-center py-5">
+                  <div class="spinner-border text-primary" role="status">
+                    <span class="visually-hidden">Cargando...</span>
+                  </div>
+                </div>
+              } @else if (ingresosResource.status() === 'error') {
+                <div class="alert alert-danger w-100">Error al cargar ingresos.</div>
+              } @else if (ingresosData() && ingresosData()?.length) {
+                <apx-chart
+                  [series]="barChartOptions().series!"
+                  [chart]="barChartOptions().chart!"
+                  [xaxis]="barChartOptions().xaxis!"
+                  [yaxis]="barChartOptions().yaxis!"
+                  [dataLabels]="barChartOptions().dataLabels!">
+                </apx-chart>
+              } @else {
+                <p class="text-muted text-center py-4">No hay datos de ingresos</p>
+              }
+            </div>
+          </div>
+        </div>
+      </div>
+
       <h2 class="h4 mb-3">Nuestros Servicios</h2>
 
       <div class="row g-4">
