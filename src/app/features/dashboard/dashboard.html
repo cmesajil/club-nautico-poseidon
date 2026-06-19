@@ -124,7 +124,7 @@
             <div class="card h-100 servicio-card">
               <div class="card-img-wrapper">
                 <img
-                  [src]="'http://localhost:8080' + servicio.imagen"
+                  [src]="apiUrl + servicio.imagen"
                   class="card-img-top"
                   [alt]="servicio.nombre"
                   (error)="onImgError($event)"

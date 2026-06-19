@@ -1,7 +1,7 @@
 import { Injectable, signal, computed, inject } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { AuthResponse, LoginCredentials } from './auth.model';
-import { tap } from 'rxjs';
+import { tap } from 'rxjs';import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
@@ -14,7 +14,7 @@ export class AuthService {
   isAuthenticated = computed(() => !!this.currentUser());
 
   login(credentials: LoginCredentials) {
-    return this.http.post<AuthResponse>('http://localhost:8080/auth/login', credentials).pipe(
+    return this.http.post<AuthResponse>(`${environment.apiUrl}/auth/login`, credentials).pipe(
       tap((response) => {
         console.log('LOGIN EXITOSO');
         console.log(response);
