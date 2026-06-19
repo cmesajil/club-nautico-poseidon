@@ -3,6 +3,7 @@ import { AuthService } from '../auth/auth.service';
 import { DashboardService } from './dashboard.service';
 import { CurrencyPipe } from '@angular/common';
 import { NgApexchartsModule, ApexOptions } from 'ng-apexcharts';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-dashboard',
@@ -15,6 +16,8 @@ import { NgApexchartsModule, ApexOptions } from 'ng-apexcharts';
 export class Dashboard {
   private authService = inject(AuthService);
   private dashboardService = inject(DashboardService);
+
+  readonly apiUrl = environment.apiUrl;
 
   resource = this.dashboardService.resumenResource;
   sociosResource = this.dashboardService.sociosEstadoResource;

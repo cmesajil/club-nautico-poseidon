@@ -1,12 +1,13 @@
 import { Injectable, inject } from '@angular/core';
 import { httpResource } from '@angular/common/http';
 import { DashboardResumen, SocioEstado, IngresoMes } from './dashboard.model';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DashboardService {
-  private apiUrl = 'http://localhost:8080/api';
+  private apiUrl = `${environment.apiUrl}/api`;
 
   resumenResource = httpResource<DashboardResumen>(() => `${this.apiUrl}/dashboard/resumen`);
   sociosEstadoResource = httpResource<SocioEstado[]>(() => `${this.apiUrl}/dashboard/socios-estado`);
